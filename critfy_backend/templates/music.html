@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Gerenciar Músicas</h2>
+
+<form id="musicForm">
+  <input type="hidden" id="musicId" value="">
+  <label for="title">Título:</label>
+  <input type="text" id="title" required>
+  <label for="album">Álbum:</label>
+  <select id="album" required></select>
+  <button type="submit">Salvar</button>
+</form>
+
+<h3>Músicas</h3>
+<ul id="musicList"></ul>
+{% endblock %}

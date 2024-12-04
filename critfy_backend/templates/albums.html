@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h2>Gerenciar Álbuns</h2>
+
+<form id="albumForm">
+  <input type="hidden" id="albumId" value="">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" required>
+  <label for="artist">Artista:</label>
+  <input type="text" id="artist" required>
+  <label for="releaseDate">Data de Lançamento:</label>
+  <input type="date" id="releaseDate" required>
+  <button type="submit">Salvar</button>
+</form>
+
+<h3>Álbuns</h3>
+<ul id="albumList"></ul>
+{% endblock %}

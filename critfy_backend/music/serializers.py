@@ -8,7 +8,10 @@ class MusicSerializer(serializers.ModelSerializer):
 
 class AlbumSerializer(serializers.ModelSerializer):
     songs = MusicSerializer(many=True, read_only=True)
+    average_rating = serializers.FloatField(read_only=True)
+    cover_image = serializers.ImageField(read_only=True)  
+  
 
     class Meta:
         model = Album
-        fields = '__all__'
+        fields = ['id', 'name', 'artist', 'release_date', 'songs', 'average_rating', 'cover_image']  
